@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!-- <![endif]-->
+
+<head>
+    <title>Baby Shower</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Happy Birthday">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Birthday, Happy">
+    <!-- Strat of Facebook Meta -->
+    <meta property="og:type" content="E-Greeting" />
+    <meta property="og:image" content="favicon.ico" />
+    <meta property="og:description" content="Baby Shower">
+    <!-- End of Facebook Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="loading.css">
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet/less" href="cake.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+    <style>
+
+        body {
+  margin: auto;
+  background: #eaeaea;  
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info p {
+  text-align:center;
+  color: #999;
+  text-transform:none;
+  font-weight:600;
+  font-size:15px;
+  margin-top:2px
+}
+
+.info i {
+  color:#F6AA93;
+}
+form h1 {
+  font-size: 18px;
+  background: #F6AA93 none repeat scroll 0% 0%;
+  color: rgb(255, 255, 255);
+  padding: 22px 25px;
+  border-radius: 5px 5px 0px 0px;
+  margin: auto;
+  text-shadow: none; 
+  text-align:left
+}
+
+form {
+  border-radius: 5px;
+  max-width:700px;
+  width:200%;
+  margin-left:20px;
+  margin-top:20px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+p span {
+  color: #F00;
+}
+
+p {
+  margin: 0px;
+  font-weight: 500;
+  line-height: 2;
+  color:#333;
+}
+
+h1 {
+  text-align:center; 
+  color: #666;
+  text-shadow: 1px 1px 0px #FFF;
+  margin:50px 0px 0px 0px
+}
+
+input {
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  width: 75%;
+  height: 40px;
+  float: left;
+  padding: 0px 15px;
+}
+
+a {
+  text-decoration:inherit
+}
+
+textarea {
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid #EEE;
+  margin: 0;
+  width: 75%;
+  height: 130px; 
+  float: left;
+  padding: 0px 15px;
+}
+
+.form-group {
+  overflow: hidden;
+  clear: both;
+}
+
+.icon-case {
+  width: 35px;
+  float: left;
+  border-radius: 5px 0px 0px 5px;
+  background:#eeeeee;
+  height:42px;
+  position: relative;
+  text-align: center;
+  line-height:40px;
+}
+
+i {
+  color:#555;
+}
+
+.contentform {
+  padding: 40px 30px;
+}
+
+.bouton-contact{
+  background-color: #81BDA4;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  border:0;
+  padding: 17px 25px;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.leftcontact {
+  width:49.5%; 
+  float:left;
+  border-right: 1px dotted #CCC;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 0px;
+}
+
+.rightcontact {
+  width:49.5%;
+  float:right;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 15px;
+}
+
+.validation {
+  display:none;
+  margin: 0 0 10px;
+  font-weight:400;
+  font-size:13px;
+  color: #DE5959;
+}
+
+#sendmessage {
+  border:1px solid #fff;
+  display:none;
+  text-align:center;
+  margin:10px 0;
+  font-weight:600;
+  margin-bottom:30px;
+  background-color: #EBF6E0;
+  color: #5F9025;
+  border: 1px solid #B3DC82;
+  padding: 13px 40px 13px 18px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.03);
+}
+
+#sendmessage.show,.show  {
+  display:block;
+}
+</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_yellow"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_red"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_blue"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_green"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_pink"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_orange"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+
+    <div class="container" style="position:fixed;top:10px">
+        <div class="row" style="padding-top:50px">
+            <div class="col-md-8">
+                <img class="img-responsive" src="RSVP.PNG" alt="Baby Shower" style="margin-top:20px">
+            </div>
+            <div class="col-md-4">
+                <form id="gform" method="POST" data-email="from_email@example.com" action="https://script.google.com/macros/s/AKfycbw2iWr2Y7jxqt4BIoN9s6DbFGGKyZdGu5WjGjqlSfmgLzpGrrE/exec">
+                    <div class="contentform">
+                        <!-- <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>-->
+
+                        <div class="input-group">
+                            <p>Name</p>
+                            <span class="icon-case"><i class="fa fa-male"></i></span>
+                            <input type="text" name="name" id="name" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <p>City</p>
+                            <span class="icon-case"><i class="fa fa-user"></i></span>
+                            <input type="text" name="wish" id="wish" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="input-group">
+                            <p>state</p>
+                            <span class="icon-case"><i class="fa fa-user"></i></span>
+                            <input type="text" name="wish" id="wish" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="input-group">
+                            <p>Are You Attending Function</p>
+                            <span class="icon-case"><i class="fa fa-user"></i></span>
+                            <input type="text" name="wish" id="wish" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="input-group">
+                            <p>If Yes,Number of people</p>
+                            <span class="icon-case"><i class="fa fa-user"></i></span>
+                            <input type="text" name="wish" id="wish" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="bouton-contact">Send</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+
+    /*************************************************/
+
+    /*** Class Firework extends FxLayer ***/
+    JSFX.Firework = function (fwImages) {
+        window[this.id = JSFX.getObjId()] = this;
+        this.imgId = "i" + this.id;
+        this.fwImages = fwImages;
+        this.numImages = fwImages.length;
+        this.superC = JSFX.fxLayer;
+        this.superC("<img src='" + fwImages[0].src + "' name='" + this.imgId + "'>");
+
+        this.img = document.layers ? this.el.document.images[0] : document.images[this.imgId];
+        this.step = 0;
+        this.timerId = -1;
+        this.x = 0;
+        this.y = 0;
+        this.dx = 0;
+        this.dy = 0;
+        this.ay = 0.2;
+        this.state = "OFF";
+    }
+    JSFX.Firework.prototype = new JSFX.fxLayer;
+
+    JSFX.Firework.prototype.getMaxDy = function () {
+        var ydiff = gY() - 130;
+        var dy = 1;
+        var dist = 0;
+        var ay = this.ay;
+        while (dist < ydiff) {
+            dist += dy;
+            dy += ay;
+        }
+        return -dy;
+    }
+    JSFX.Firework.prototype.setFrame = function () {
+        //	this.img.src=this.fwName+"/"+this.step+".gif";
+        this.img.src = this.fwImages[this.step].src;
+    }
+    JSFX.Firework.prototype.animate = function () {
+
+        if (this.state == "OFF") {
+
+            this.step = 0;
+            this.x = -200;
+            this.y = -200;
+            this.moveTo(this.x, this.y);
+            this.setFrame();
+            if (Math.random() > .95) {
+                this.x = (gX() - 100) * Math.random();
+                this.y = (gY() - 100) * Math.random();
+                this.moveTo(this.x, this.y);
+                this.state = "EXPLODE";
+            }
+        }
+        else if (this.state == "EXPLODE") {
+            this.step++;
+            if (this.step < this.numImages)
+                this.setFrame();
+            else
+                this.state = "OFF";
+        }
+    }
+    /*** END Class Firework***/
+
+    /*** Class FireworkDisplay extends Object ***/
+    JSFX.FireworkDisplay = function (n, fwImages, numImages) {
+        window[this.id = JSFX.getObjId()] = this;
+        this.timerId = -1;
+        this.fireworks = new Array();
+        this.imgArray = new Array();
+        this.loadCount = 0;
+        this.loadImages(fwImages, numImages);
+
+        for (var i = 0; i < n; i++)
+            this.fireworks[this.fireworks.length] = new JSFX.Firework(this.imgArray);
+    }
+    JSFX.FireworkDisplay.prototype.loadImages = function (fwName, numImages) {
+        for (var i = 0; i < numImages; i++) {
+            this.imgArray[i] = new Image();
+            this.imgArray[i].obj = this;
+            this.imgArray[i].onload = window[this.id].imageLoaded;
+            this.imgArray[i].src = fwName + "/" + i + ".gif";
+        }
+    }
+    JSFX.FireworkDisplay.prototype.imageLoaded = function () {
+        this.obj.loadCount++;
+    }
+
+    JSFX.FireworkDisplay.prototype.animate = function () {
+        status = this.loadCount;
+        if (this.loadCount < this.imgArray.length)
+            return;
+
+        for (var i = 0; i < this.fireworks.length; i++)
+            this.fireworks[i].animate();
+    }
+    JSFX.FireworkDisplay.prototype.start = function () {
+        if (this.timerId == -1) {
+            this.state = "OFF";
+            this.timerId = setInterval("window." + this.id + ".animate()", 40);
+        }
+
+    }
+    JSFX.FireworkDisplay.prototype.stop = function () {
+        if (this.timerId != -1) {
+            clearInterval(this.timerId);
+            this.timerId = -1;
+            for (var i = 0; i < this.fireworks.length; i++) {
+                this.fireworks[i].moveTo(-100, -100);
+                this.fireworks[i].step = 0;;
+                this.fireworks[i].state = "OFF";
+            }
+        }
+    }
+    /*** END Class FireworkDisplay***/
+
+    JSFX.FWStart = function () {
+        if (JSFX.FWLoad) JSFX.FWLoad();
+        myFW.start();
+    }
+    myFW = new JSFX.FireworkDisplay(num_fireworks = 20, firework_images = "fw01", num_frames = 21);
+    JSFX.FWLoad = window.onload;
+    window.onload = JSFX.FWStart;
+
+</script>
+<script>
+    $('document').ready(function () {
+        myFW.start();
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="effect.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-58229732-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
+    // not supported in all browsers though and sometimes needs a prefix, so we need a shim
+    window.requestAnimFrame = (function () {
+        return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 500 / 60);
+            };
+    })();
+
+    // now we will setup our basic variables for the demo
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        // full screen dimensions
+        cw = window.innerWidth,
+        ch = window.innerHeight,
+        // firework collection
+        fireworks = [],
+        // particle collection
+        particles = [],
+        // starting hue
+        hue = 120,
+        // when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+        limiterTotal = 5,
+        limiterTick = 0,
+        // this will time the auto launches of fireworks, one launch per 80 loop ticks
+        timerTotal = 80,
+        timerTick = 0,
+        mousedown = false,
+        // mouse x coordinate,
+        mx,
+        // mouse y coordinate
+        my;
+
+    // set canvas dimensions
+    canvas.width = cw;
+    canvas.height = ch;
+
+    // now we are going to setup our function placeholders for the entire demo
+
+    // get a random number within a range
+    function random(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    // calculate the distance between two points
+    function calculateDistance(p1x, p1y, p2x, p2y) {
+        var xDistance = p1x - p2x,
+            yDistance = p1y - p2y;
+        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+    }
+
+    // create firework
+    function Firework(sx, sy, tx, ty) {
+        // actual coordinates
+        this.x = sx;
+        this.y = sy;
+        // starting coordinates
+        this.sx = sx;
+        this.sy = sy;
+        // target coordinates
+        this.tx = tx;
+        this.ty = ty;
+        // distance from starting point to target
+        this.distanceToTarget = calculateDistance(sx, sy, tx, ty);
+        this.distanceTraveled = 0;
+        // track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 3;
+        // populate initial coordinate collection with the current coordinates
+        while (this.coordinateCount--) {
+            this.coordinates.push([this.x, this.y]);
+        }
+        this.angle = Math.atan2(ty - sy, tx - sx);
+        this.speed = 2;
+        this.acceleration = 1.05;
+        this.brightness = random(50, 70);
+        // circle target indicator radius
+        this.targetRadius = 1;
+    }
+
+    // update firework
+    Firework.prototype.update = function (index) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift([this.x, this.y]);
+
+        // cycle the circle target indicator radius
+        if (this.targetRadius < 8) {
+            this.targetRadius += 0.3;
+        } else {
+            this.targetRadius = 1;
+        }
+
+        // speed up the firework
+        this.speed *= this.acceleration;
+
+        // get the current velocities based on angle and speed
+        var vx = Math.cos(this.angle) * this.speed,
+            vy = Math.sin(this.angle) * this.speed;
+        // how far will the firework have traveled with velocities applied?
+        this.distanceTraveled = calculateDistance(this.sx, this.sy, this.x + vx, this.y + vy);
+
+        // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+        if (this.distanceTraveled >= this.distanceToTarget) {
+            createParticles(this.tx, this.ty);
+            // remove the firework, use the index passed into the update function to determine which to remove
+            fireworks.splice(index, 1);
+        } else {
+            // target not reached, keep traveling
+            this.x += vx;
+            this.y += vy;
+        }
+    }
+
+    // draw firework
+    Firework.prototype.draw = function () {
+        ctx.beginPath();
+        // move to the last tracked coordinate in the set, then draw a line to the current x and y
+        ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
+        ctx.lineTo(this.x, this.y);
+        ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
+        ctx.stroke();
+
+        ctx.beginPath();
+        // draw the target for this firework with a pulsing circle
+        ctx.arc(this.tx, this.ty, this.targetRadius, 0, Math.PI * 2);
+        ctx.stroke();
+    }
+
+    // create particle
+    function Particle(x, y) {
+        this.x = x;
+        this.y = y;
+        // track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 5;
+        while (this.coordinateCount--) {
+            this.coordinates.push([this.x, this.y]);
+        }
+        // set a random angle in all possible directions, in radians
+        this.angle = random(0, Math.PI * 2);
+        this.speed = random(1, 10);
+        // friction will slow the particle down
+        this.friction = 0.95;
+        // gravity will be applied and pull the particle down
+        this.gravity = 1;
+        // set the hue to a random number +-50 of the overall hue variable
+        this.hue = random(hue - 50, hue + 50);
+        this.brightness = random(50, 80);
+        this.alpha = 1;
+        // set how fast the particle fades out
+        this.decay = random(0.015, 0.03);
+    }
+
+    // update particle
+    Particle.prototype.update = function (index) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift([this.x, this.y]);
+        // slow down the particle
+        this.speed *= this.friction;
+        // apply velocity
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed + this.gravity;
+        // fade out the particle
+        this.alpha -= this.decay;
+
+        // remove the particle once the alpha is low enough, based on the passed in index
+        if (this.alpha <= this.decay) {
+            particles.splice(index, 1);
+        }
+    }
+
+    // draw particle
+    Particle.prototype.draw = function () {
+        ctx.beginPath();
+        // move to the last tracked coordinates in the set, then draw a line to the current x and y
+        ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
+        ctx.lineTo(this.x, this.y);
+        ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+        ctx.stroke();
+    }
+
+    // create particle group/explosion
+    function createParticles(x, y) {
+        // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+        var particleCount = 30;
+        while (particleCount--) {
+            particles.push(new Particle(x, y));
+        }
+    }
+
+    // main demo loop
+    function loop() {
+        // this function will run endlessly with requestAnimationFrame
+        requestAnimFrame(loop);
+
+        // increase the hue to get different colored fireworks over time
+        //hue += 0.5;
+
+        // create random color
+        hue = random(0, 360);
+
+        // normally, clearRect() would be used to clear the canvas
+        // we want to create a trailing effect though
+        // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+        ctx.globalCompositeOperation = 'destination-out';
+        // decrease the alpha property to create more prominent trails
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        ctx.fillRect(0, 0, cw, ch);
+        // change the composite operation back to our main mode
+        // lighter creates bright highlight points as the fireworks and particles overlap each other
+        ctx.globalCompositeOperation = 'lighter';
+
+        // loop over each firework, draw it, update it
+        var i = fireworks.length;
+        while (i--) {
+            fireworks[i].draw();
+            fireworks[i].update(i);
+        }
+
+        // loop over each particle, draw it, update it
+        var i = particles.length;
+        while (i--) {
+            particles[i].draw();
+            particles[i].update(i);
+        }
+
+        // launch fireworks automatically to random coordinates, when the mouse isn't down
+        if (timerTick >= timerTotal) {
+            if (!mousedown) {
+                // start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+                fireworks.push(new Firework(cw / 2, ch, random(0, cw), random(0, ch / 2)));
+                timerTick = 0;
+            }
+        } else {
+            timerTick++;
+        }
+
+        // limit the rate at which fireworks get launched when mouse is down
+        if (limiterTick >= limiterTotal) {
+            if (mousedown) {
+                // start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
+                fireworks.push(new Firework(cw / 2, ch, mx, my));
+                limiterTick = 0;
+            }
+        } else {
+            limiterTick++;
+        }
+    }
+
+    // mouse event bindings
+    // update the mouse coordinates on mousemove
+    canvas.addEventListener('mousemove', function (e) {
+        mx = e.pageX - canvas.offsetLeft;
+        my = e.pageY - canvas.offsetTop;
+    });
+
+    // toggle mousedown state and prevent canvas from being selected
+    canvas.addEventListener('mousedown', function (e) {
+        e.preventDefault();
+        mousedown = true;
+    });
+
+    canvas.addEventListener('mouseup', function (e) {
+        e.preventDefault();
+        mousedown = false;
+    });
+
+    // once the window loads, we are ready for some fireworks!
+    window.onload = loop;
+
+</script>
+
+</html>
